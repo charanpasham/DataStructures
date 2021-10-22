@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{FF7A5EFA-4305-46EC-9611-7884367E9FC7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="BinaryTree.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument=".gitignore">
     <Files>
       <File FileName="Program.cs" Line="79" Column="1" />
       <File FileName="LinkedList.cs" Line="1" Column="1" />
       <File FileName="StackProblems/StackProblems.cs" Line="49" Column="33" />
-      <File FileName="BinaryTree.cs" Line="3" Column="2" />
+      <File FileName="BinaryTree.cs" Line="15" Column="1" />
+      <File FileName=".gitignore" Line="25" Column="7" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,7 +13,7 @@
           <Node name="logicBuilding" expanded="True">
             <Node name="logicBuilding" expanded="True">
               <Node name="StackProblems" expanded="True" />
-              <Node name="BinaryTree.cs" selected="True" />
+              <Node name=".gitignore" selected="True" />
             </Node>
           </Node>
         </State>
