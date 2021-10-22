@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.IO;
-using System.Diagnostics;
-using logicBuilding.Doubly;
-using Microsoft.
-
+using logicBuilding.StackProblems;
 
 namespace logicBuilding
 {
@@ -78,6 +73,10 @@ namespace logicBuilding
     {
         static void Main(string[] args)
         {
+
+            Console.WriteLine(StackProblems.StackProblems.IsExpressionValid("()()()()"));
+            Console.WriteLine(StackProblems.StackProblems.IsExpressionValid(")()()()"));
+            Console.WriteLine(StackProblems.StackProblems.IsExpressionValid("[{}]())"));
 
             //QueueLinkedList list = new QueueLinkedList();
 

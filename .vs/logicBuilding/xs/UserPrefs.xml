@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{FF7A5EFA-4305-46EC-9611-7884367E9FC7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="BinaryTree.cs">
+    <Files>
+      <File FileName="Program.cs" Line="79" Column="1" />
+      <File FileName="LinkedList.cs" Line="1" Column="1" />
+      <File FileName="StackProblems/StackProblems.cs" Line="49" Column="33" />
+      <File FileName="BinaryTree.cs" Line="3" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="logicBuilding" expanded="True">
+            <Node name="logicBuilding" expanded="True">
+              <Node name="StackProblems" expanded="True" />
+              <Node name="BinaryTree.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>stackResult</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.logicBuilding PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/charan/Projects/DataStructures/Program.cs" relfile="Program.cs" line="79" column="1" />
+      <Breakpoint file="/Users/charan/Projects/DataStructures/StackProblems/StackProblems.cs" relfile="StackProblems/StackProblems.cs" line="24" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

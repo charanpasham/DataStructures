@@ -1,0 +1,15 @@
+/Users/charan/Projects/DataStructures/bin/Debug/net5.0/logicBuilding.deps.json
+/Users/charan/Projects/DataStructures/bin/Debug/net5.0/logicBuilding.runtimeconfig.json
+/Users/charan/Projects/DataStructures/bin/Debug/net5.0/logicBuilding.runtimeconfig.dev.json
+/Users/charan/Projects/DataStructures/bin/Debug/net5.0/logicBuilding.dll
+/Users/charan/Projects/DataStructures/bin/Debug/net5.0/ref/logicBuilding.dll
+/Users/charan/Projects/DataStructures/bin/Debug/net5.0/logicBuilding.pdb
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.csproj.AssemblyReference.cache
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.GeneratedMSBuildEditorConfig.editorconfig
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.AssemblyInfoInputs.cache
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.AssemblyInfo.cs
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.csproj.CoreCompileInputs.cache
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.dll
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/ref/logicBuilding.dll
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.pdb
+/Users/charan/Projects/DataStructures/obj/Debug/net5.0/logicBuilding.genruntimeconfig.cache
