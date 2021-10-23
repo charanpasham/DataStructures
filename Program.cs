@@ -74,75 +74,30 @@ namespace logicBuilding
         static void Main(string[] args)
         {
 
-            Console.WriteLine(StackProblems.StackProblems.IsExpressionValid("()()()()"));
-            Console.WriteLine(StackProblems.StackProblems.IsExpressionValid(")()()()"));
-            Console.WriteLine(StackProblems.StackProblems.IsExpressionValid("[{}]())"));
+            var list = new LinkedList<int>();
+            list.Add(3);
+            list.Add(5);
+            list.Add(10);
+            list.Add(20);
+     
+            foreach(var item in list)
+            {
+                Console.WriteLine(item);
+            }
 
-            //QueueLinkedList list = new QueueLinkedList();
+            Console.WriteLine("Count of numbers" + list.Count());
 
-            //Console.WriteLine("Choose you choice:");
-            //int key;
-            //do
-            //{
-            //    Console.WriteLine("1.Enqueue\n2.Dequeue\n3.Display\n4.TotalCount\n5.Quit");
-            // key = Convert.ToInt32(Console.ReadLine());
-            //    switch (key)
-            //    {
-            //        case 1:
-            //            Console.WriteLine("Enter Queue element");
+            var listString = new LinkedList<string>();
+            listString.Add("Apples");
+            listString.Add("Oranges");
+            listString.Add("Bananas");
+            listString.Add("Grapes");
+            foreach(var itemString in listString)
+            {
+                Console.WriteLine(itemString);
+            }
 
-
-
-            //            int element = Convert.ToInt32(Console.ReadLine());
-            //            list.Enqueue(element);
-
-            //            break;
-            //        case 2:
-            //            list.Dequeue();
-            //            break;
-            //        case 3:
-            //            list.Display();
-            //            break;
-            //        case 4: list.Count();
-            //            break;
-            //    }
-            //} while (key != 5);
-
-            LinkedList list = new LinkedList();
-            list.AddAtFirst(100);
-            list.AddAtLast(200);
-            list.AddAtFirst(430);
-            list.AddAtLast(1000);
-            list.AddAtIndex(2000, 3);
-            list.Traverse();
-            list.Reverse();
-
-        
-            list.Traverse();
-      
-       
-    
-
-
-
-            //list.Additems("Hello");
-            //list.Additems("Charan");
-            //list.Additems("Reddy");
-            //list.TotalCount();
-
-            //list.Traverse();
-
-            //list.SearchAndDelete("Reddy");
-            //list.SearchAndDelete(30);
-            //list.SearchAndDelete(150);
-            //list.SearchAndDelete(20);
-            //list.SearchAndDelete(1);
-
-            //list.TotalCount();
-            //list.Traverse();
-
-
-
+            Console.WriteLine("Count of fruites" + listString.Count());
         }
     }
 

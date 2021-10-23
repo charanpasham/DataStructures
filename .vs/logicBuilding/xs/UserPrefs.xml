@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{FF7A5EFA-4305-46EC-9611-7884367E9FC7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument=".gitignore">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinkedList.cs">
     <Files>
-      <File FileName="Program.cs" Line="79" Column="1" />
-      <File FileName="LinkedList.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="83" Column="1" />
+      <File FileName="LinkedList.cs" Line="90" Column="9" />
       <File FileName="StackProblems/StackProblems.cs" Line="49" Column="33" />
       <File FileName="BinaryTree.cs" Line="15" Column="1" />
       <File FileName=".gitignore" Line="25" Column="7" />
@@ -12,8 +12,7 @@
         <State name="__root__">
           <Node name="logicBuilding" expanded="True">
             <Node name="logicBuilding" expanded="True">
-              <Node name="StackProblems" expanded="True" />
-              <Node name=".gitignore" selected="True" />
+              <Node name="LinkedList.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -30,7 +29,6 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/charan/Projects/DataStructures/Program.cs" relfile="Program.cs" line="79" column="1" />
       <Breakpoint file="/Users/charan/Projects/DataStructures/StackProblems/StackProblems.cs" relfile="StackProblems/StackProblems.cs" line="24" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

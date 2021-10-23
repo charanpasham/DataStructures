@@ -1,180 +1,162 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace logicBuilding
 {
 
-    //Create a list node.
-    //With value store and next element address reference.
-    public class Node
+    public class Node<T>
     {
-        public object item { get; set; }
-        public Node next{ get; set; }
+        public T Value { get; set; }
+        public Node<T> Next { get; set; }
     }
 
-    /*Operation of a linked list. 
-        *Add items.
-        *Delete items. 
-        *Total Count. 
-
-
-     */
-    public class LinkedList
+    public class LinkedList<T> : IEnumerable<T>
     {
-        private static int count = 0; 
-        Node Head;
-        private Node currentNode;
-         
-
-
+        public Node<T> Current = null;
+        public Node<T> Head = null;
         public LinkedList()
         {
-            Head = new Node();
-            currentNode = new Node();
+            Current = Head;
         }
 
-        public bool isEmpty(){
-            return count == 0;
-        }
-        public void AddAtFirst(object item){
 
-            if (count == 0)
+        public void Add(T item)
+        {
+            // 5 -> 4 -> 3 -> null
+            if(Head == null)
             {
-                Head = new Node();
-                Head.item = item;
-                currentNode.next = Head;
-                currentNode = Head;
-                count++;
-            }
-            else
+                Head = Current = new Node<T>();
+                Current.Value = item;
+            } else
             {
-                Node newNode = new Node();
-                newNode.item = item;
-                newNode.next = Head.next;
-                Head.next = newNode;
-                count++;
-
-                if (count == 1)
-                {
-                    currentNode.next = newNode;
-                    currentNode = newNode;
-                }
+                Current.Next = new Node<T>();
+                Current = Current.Next;
+                Current.Value = item;
             }
-
-        }
-        public void AddAtLast(object item){
-            Node node = new Node();
-            node.item = item;
-            currentNode.next = node;
-            currentNode = node;
-            //Node curr = Head; 
-            //while(curr.next!=null){
-            //    curr = curr.next; 
-            //}
-            //curr.next = node;
-             
-            count++;
-        }
-        public void AddAtIndex(object item, int index){
-            Node curr = Head; 
-            for (int i = 0; i < index; i++){
-                curr = curr.next;
-            }
-            Node node = new Node();
-            node.item = item;
-            node.next = curr.next;
-            curr.next = node;
-            count++;
-        }
-        public void Reverse(){
-            Node curr = Head;
-            Node next = null;
-            Node prev = null; 
-            while(curr.next!=null){
-                next = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = next;
-            }
-            curr.next = prev;
-            Head = curr;
-
-          curr = Head; 
-            while(curr.next!=null){
-                curr = curr.next; 
-
-            }
-            currentNode = curr;
-
         }
 
-        //public void Additems(object item){
-        //    if(count == 0){
-        //        Node MyNode = new Node(); //Create a new node;
-        //        MyNode.item = item; //Insert element into new node;
-        //        Head.next = MyNode;
-        //        Current.next = MyNode;
-        //        Current = MyNode;
-        //        count++;
+
+
+        public int Count()
+        {
+            Current = Head;
+            var count = 0;
+            while(Current != null)
+            {
+                count += 1;
+                Current = Current.Next;
+            }
+            return count;
+        }
+
+
+        //public void Remove(T item)
+        //{
+
+        //    Head = root;
+        //    Node prev = null;
+
+        //    if (Head.Value.Equals(item))
+        //    {
+        //        root = Head.Next;
+        //        Head = root;
+        //        return;
         //    }
-        //    else{
-        //        Node MyNode = new Node(); //Create a new node;
-        //        MyNode.item = item; //Insert element into new node;
-        //        Current.next = MyNode;
-        //        Current = MyNode;
-        //        count++;
+        //    else
+        //    {
+        //        while(Head != null)
+        //        {
+        //            foreach()
+
+        //        }
         //    }
         //}
 
-        public void Traverse(){
-            Node curr = Head;
-            Console.Write("Head ->");
-            while(curr.next!=null)
+
+
+        public bool Remove(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return new Enumerator<T>(this);
+        }
+
+        // Only private getEnumerator is defined in IEnumerable.
+        // But in essense, even if a class has any public GetEnumerator method (without having to extend IEnumerable), it will be called from foreach.
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+    }
+
+    public struct Enumerator<T> : IEnumerator<T>
+    {
+        private LinkedList<T> myList;
+        private Node<T> myNode;
+        private int index;
+        private T current;
+        public Enumerator(LinkedList<T> list)
+        {
+            myList = list;
+            myNode = list.Head;
+            current = default(T);
+            index = 0;
+        }
+
+
+        public T Current
+        {
+            get { return current; }
+        }
+
+        object IEnumerator.Current
+        {
+            get
             {
-                Console.Write(curr.item);
-                curr = curr.next;
-
-          
-
-                Console.Write("->");
-            } 
-            Console.WriteLine();
-        }
-        public void Remove(object item){
-
-            Console.WriteLine($"Deleting {item} from list.....");
-            Node curr = Head;
-            Node prev;
-            int flag = 0;
-            while(curr.next!=null){
-                prev = curr;
-                curr = curr.next;
-                if(curr.item.Equals(item)){
-                    //undergo delete operation
-                    prev.next = curr.next;
-                    count--;
-                    flag = 1;
+                if (index == 0 || (index == myList.Count() + 1))
+                {
+                    throw new InvalidOperationException();
                 }
-               
-            }
-            if(flag == 0){
-              Console.WriteLine($"{item} is not found in the list.");
+
+                return Current;
             }
         }
-        public void TotalCount(){
-            Console.WriteLine($"Number of elements in the list are:{count}");
+
+
+        public void Dispose()
+        {
         }
 
-        public void RemoveAt(int position){
-            Node curr = Head;
-            Node prev = Head;
-            for (int i = 0; i < position; i++){
-                prev = curr;  
-                    curr = curr.next;
-                    
+        public bool MoveNext()
+        {
+
+            if(myNode == null)
+            {
+                index = myList.Count() + 1;
+                return false;
             }
-
-            prev.next = curr.next;
+            index++;
+            current = myNode.Value;
+            myNode = myNode.Next;
+            if(myNode == myList.Head)
+            {
+                myNode = null;
+            }
+            return true;
         }
 
-
+        public void Reset()
+        {
+            current = default(T);
+            myNode = myList.Head;
+            index = 0;
+        }
     }
 }
